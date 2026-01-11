@@ -1,0 +1,27 @@
+Method Overriding & super
+
+Same method name & signature
+
+super.method() calls parent version
+
+Cannot override final methods
+
+Potential Issues & Rules (The "Contract" of Overriding)
+When overriding a method, you must follow these strict rules to avoid compilation errors:
+
+1.Access Modifiers:
+
+You cannot reduce the visibility of the inherited method.
+Example: If the parent method is public, the child method cannot be protected or private. (Public > Protected > Default > Private).
+
+2.Final Methods:
+
+If a method is declared as final in the superclass, it cannot be overridden.
+
+3.Static Methods:
+
+Static methods cannot be overridden. If you define a static method with the same signature in the subclass, it is called Method Hiding, not overriding.
+
+4.Exception Handling:
+
+The overriding method (child) cannot throw a new or broader Checked Exception than the overridden method (parent). However, it can throw any Unchecked (Runtime) Exception.
