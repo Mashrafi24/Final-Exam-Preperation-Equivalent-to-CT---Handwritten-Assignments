@@ -1,0 +1,18 @@
+class Z implements X, Y { }
+
+Error: Ambiguous default method show()
+
+
+
+Solution 1:
+Override Method
+public class Z implements X, Y {
+    public void show() {
+        X.super.show();
+    }
+}
+
+Solution 2:
+Use Only One Interface
+public class Z implements X {
+}
