@@ -1,0 +1,15 @@
+1. Abstraction
+Definition: Abstraction is the process of hiding the implementation details and showing only the essential features of 
+the object to the user. It focuses on "what" the object does instead of "how" it does it.
+
+2. Encapsulation
+Definition: Encapsulation is the mechanism of wrapping data (variables) and code (methods) together 
+as a single unit. It is primarily used for Data Hiding.
+
+
+How it works:
+
+Declare variables of a class as private.
+
+Provide public getter and setter methods to modify and view the variable values.
+
