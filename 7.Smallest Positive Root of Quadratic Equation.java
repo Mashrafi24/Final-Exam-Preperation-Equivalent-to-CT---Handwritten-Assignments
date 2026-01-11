@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Quadratic {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+
+        double d = b*b - 4*a*c;
+
+        if (d < 0)
+            System.out.println("No real roots");
+        else {
+            double r1 = (-b + Math.sqrt(d)) / (2*a);
+            double r2 = (-b - Math.sqrt(d)) / (2*a);
+
+            double min = Double.MAX_VALUE;
+
+            if (r1 > 0) min = r1;
+            if (r2 > 0 && r2 < min) min = r2;
+
+            if (min == Double.MAX_VALUE)
+                System.out.println("No positive root");
+            else
+                System.out.println(min);
+        }
+    }
+}
